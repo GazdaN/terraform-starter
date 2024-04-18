@@ -76,6 +76,7 @@ resource "spacelift_policy" "trigger" {
 
   name = "Trigger stacks that declare an explicit dependency"
   body = file("${path.module}/policies/trigger.rego")
+  space_id = "root"
 }
 
 # Trigger policies only take effect when attached to the stack.
